@@ -1,0 +1,85 @@
+{
+  "description": "Full pilot configuration with all 5 models",
+  "prompts_file": "data/prompts/hallu-sec-benchmark.json",
+  "output_dir": "results/pilot",
+  "seed": 42,
+  "api_delay": 1.0,
+  "models": [
+    {
+      "name": "claude-3-5-sonnet-20241022",
+      "type": "claude",
+      "temperature": 0.0,
+      "api_key": "${ANTHROPIC_API_KEY}",
+      "notes": "Closed API high-capability, conservative sampling"
+    },
+    {
+      "name": "claude-3-5-sonnet-20241022",
+      "type": "claude",
+      "temperature": 0.7,
+      "api_key": "${ANTHROPIC_API_KEY}",
+      "notes": "Closed API high-capability, exploratory sampling"
+    },
+    {
+      "name": "gemini-1.5-pro",
+      "type": "gemini",
+      "temperature": 0.0,
+      "api_key": "${GOOGLE_API_KEY}",
+      "notes": "Closed API high-capability, conservative sampling"
+    },
+    {
+      "name": "gemini-1.5-pro",
+      "type": "gemini",
+      "temperature": 0.7,
+      "api_key": "${GOOGLE_API_KEY}",
+      "notes": "Closed API high-capability, exploratory sampling"
+    },
+    {
+      "name": "Qwen/Qwen2.5-14B-Instruct",
+      "type": "local",
+      "temperature": 0.0,
+      "device": "cuda",
+      "model_path": "Qwen/Qwen2.5-14B-Instruct",
+      "notes": "Open local model for interpretability (14B)"
+    },
+    {
+      "name": "Qwen/Qwen2.5-14B-Instruct",
+      "type": "local",
+      "temperature": 0.7,
+      "device": "cuda",
+      "model_path": "Qwen/Qwen2.5-14B-Instruct",
+      "notes": "Open local model for interpretability, exploratory"
+    },
+    {
+      "name": "mistralai/Mistral-7B-Instruct-v0.3",
+      "type": "local",
+      "temperature": 0.0,
+      "device": "cuda",
+      "model_path": "mistralai/Mistral-7B-Instruct-v0.3",
+      "notes": "Medium open model (7B)"
+    },
+    {
+      "name": "mistralai/Mistral-7B-Instruct-v0.3",
+      "type": "local",
+      "temperature": 0.7,
+      "device": "cuda",
+      "model_path": "mistralai/Mistral-7B-Instruct-v0.3",
+      "notes": "Medium open model, exploratory"
+    },
+    {
+      "name": "microsoft/Phi-3-mini-128k-instruct",
+      "type": "local",
+      "temperature": 0.0,
+      "device": "cuda",
+      "model_path": "microsoft/Phi-3-mini-128k-instruct",
+      "notes": "Small open model (3.8B)"
+    },
+    {
+      "name": "microsoft/Phi-3-mini-128k-instruct",
+      "type": "local",
+      "temperature": 0.7,
+      "device": "cuda",
+      "model_path": "microsoft/Phi-3-mini-128k-instruct",
+      "notes": "Small open model, exploratory"
+    }
+  ]
+}

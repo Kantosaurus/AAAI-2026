@@ -1,0 +1,707 @@
+{
+  "total_warnings": 106,
+  "warnings": [
+    {
+      "id": "malware_description-REAL-150",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-151",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-152",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-153",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-154",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-155",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-156",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-157",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-158",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-REAL-159",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-346",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-347",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-348",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-350",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-351",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-352",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-353",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-354",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-355",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-356",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-357",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-358",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-359",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-360",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-361",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-362",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-363",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-364",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-365",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-366",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-367",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-368",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-369",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-370",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-371",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-372",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-373",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-374",
+      "warnings": [
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-378",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-381",
+      "warnings": [
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-384",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-385",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-386",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-387",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-388",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-389",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-390",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-391",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-392",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-393",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-394",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-REAL-395",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-021",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-022",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-023",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-024",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-025",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-026",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-027",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-028",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-029",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-030",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-031",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-032",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-033",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-034",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-035",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-036",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-037",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-REAL-038",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-SYNTHETIC-095",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-SYNTHETIC-096",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-SYNTHETIC-097",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-SYNTHETIC-098",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "malware_description-SYNTHETIC-099",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-198",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-199",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-200",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-201",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-202",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-203",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-204",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-205",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-206",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-207",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-208",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-209",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-210",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-211",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-212",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-213",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-214",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-215",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "pentest_reporting-SYNTHETIC-220",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-011",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-012",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-013",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-014",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-015",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-016",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-017",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning",
+        "Contains attack terminology without defensive framing"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-018",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-019",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-020",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-021",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    },
+    {
+      "id": "vulnerability_summary-SYNTHETIC-022",
+      "warnings": [
+        "Contains \"exploit\" without explicit safety warning"
+      ]
+    }
+  ]
+}
