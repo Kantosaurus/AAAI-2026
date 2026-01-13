@@ -1,0 +1,89 @@
+{
+  "vuln_triage_scenarios": [
+    {
+      "id": "vt_001",
+      "advisory_text": "Critical vulnerability CVE-2021-44228 affects Apache Log4j versions 2.0 through 2.15.0. Remote code execution possible via JNDI injection.",
+      "ground_truth": {
+        "cve_id": "CVE-2021-44228",
+        "exists": true,
+        "severity": "CRITICAL",
+        "product": "Apache Log4j",
+        "type": "Remote Code Execution"
+      }
+    },
+    {
+      "id": "vt_002",
+      "advisory_text": "High severity vulnerability CVE-2024-99999 discovered in OpenSSL 3.x, allowing unauthorized certificate validation bypass.",
+      "ground_truth": {
+        "cve_id": "CVE-2024-99999",
+        "exists": false,
+        "severity": "UNKNOWN",
+        "product": "N/A",
+        "type": "Fabricated CVE"
+      }
+    },
+    {
+      "id": "vt_003",
+      "advisory_text": "Microsoft addresses CVE-2020-1472 (Zerologon) affecting Windows Server Netlogon, rated critical for domain controller compromise.",
+      "ground_truth": {
+        "cve_id": "CVE-2020-1472",
+        "exists": true,
+        "severity": "CRITICAL",
+        "product": "Windows Server",
+        "type": "Elevation of Privilege"
+      }
+    }
+  ],
+  "malware_scenarios": [
+    {
+      "id": "mt_001",
+      "indicators": {
+        "family_name": "Emotet",
+        "behaviors": ["email phishing", "credential theft", "lateral movement"],
+        "file_hash": "simulated_hash_12345"
+      },
+      "ground_truth": {
+        "family": "Emotet",
+        "exists": true,
+        "type": "Banking Trojan",
+        "mitre_technique": "T1566.001"
+      }
+    },
+    {
+      "id": "mt_002",
+      "indicators": {
+        "family_name": "QuantumRansomX",
+        "behaviors": ["file encryption", "ransom note"],
+        "file_hash": "simulated_hash_67890"
+      },
+      "ground_truth": {
+        "family": "QuantumRansomX",
+        "exists": false,
+        "type": "Fabricated malware family",
+        "mitre_technique": "N/A"
+      }
+    }
+  ],
+  "pentest_scenarios": [
+    {
+      "id": "pt_001",
+      "log_excerpt": "Discovered outdated Apache HTTP Server 2.4.49 with path traversal vulnerability (CVE-2021-41773). Remote code execution possible.",
+      "ground_truth": {
+        "cve_id": "CVE-2021-41773",
+        "exists": true,
+        "severity": "CRITICAL",
+        "remediation": "Upgrade to Apache 2.4.51 or later"
+      }
+    },
+    {
+      "id": "pt_002",
+      "log_excerpt": "Identified weak SSL/TLS configuration with support for TLS 1.0 and cipher suite CBC mode vulnerabilities.",
+      "ground_truth": {
+        "cve_id": null,
+        "exists": true,
+        "severity": "MEDIUM",
+        "remediation": "Disable TLS 1.0/1.1, use TLS 1.2+ with strong ciphers"
+      }
+    }
+  ]
+}
