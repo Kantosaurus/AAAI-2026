@@ -1,6 +1,6 @@
 # Developer Guide
 
-**Version:** 2.0
+**Version:** 2.4
 **Last Updated:** January 13, 2026
 **Document ID:** DOC-DEV-001
 
@@ -40,10 +40,12 @@ This project follows these principles:
 ```
 Language:        Python 3.8+ (3.10+ recommended)
 Package Manager: pip with requirements.txt
-Testing:         pytest, unittest
-Linting:         flake8, mypy
+Testing:         pytest, pytest-cov, pytest-asyncio
+Linting:         ruff, mypy
 Formatting:      black, isort
 Documentation:   Markdown, docstrings
+CI/CD:           GitHub Actions
+Dashboard:       React 18, Vite, Recharts
 ```
 
 ### 1.3 Repository Structure
@@ -69,6 +71,13 @@ AAAI-2026/
 ├── results/                 # Output storage
 ├── docs/                    # Documentation
 ├── tests/                   # Test suite
+├── dashboard/               # React web dashboard
+│   ├── src/components/     # Chart components
+│   ├── src/hooks/          # Data loading hooks
+│   └── src/utils/          # Data transformations
+├── .github/workflows/       # CI/CD pipelines
+│   ├── ci.yml              # Main CI workflow
+│   └── pr.yml              # PR checks
 └── scripts/                 # Utility scripts
 ```
 
@@ -80,7 +89,7 @@ AAAI-2026/
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/AAAI-2026.git
+git clone https://github.com/Kantosaurus/AAAI-2026.git
 cd AAAI-2026
 
 # Create virtual environment
@@ -661,11 +670,71 @@ pytest tests/test_pilot_runner.py::TestRateLimiter::test_initialization
 # Run integration tests only
 pytest -m integration
 
+# Skip slow tests
+pytest -m "not slow"
+
+# Skip tests requiring GPU
+pytest -m "not gpu"
+
+# Skip tests requiring API keys
+pytest -m "not api"
+
 # Run with verbose output
 pytest -v
 
 # Run with output capture disabled
 pytest -s
+```
+
+### 6.5 CI/CD Pipeline
+
+The project uses GitHub Actions for continuous integration.
+
+#### Workflows
+
+| Workflow | Trigger | Description |
+|----------|---------|-------------|
+| `ci.yml` | Push to main, PR | Full CI: lint, test, type-check |
+| `pr.yml` | Pull requests | Lightweight PR validation |
+
+#### CI Jobs
+
+```yaml
+# .github/workflows/ci.yml
+jobs:
+  lint:        # ruff linting
+  test:        # pytest with coverage
+  type-check:  # mypy type checking
+  syntax:      # Python syntax validation
+```
+
+#### Running CI Locally
+
+```bash
+# Install dev dependencies
+pip install -r requirements-dev.txt
+
+# Run linting (ruff)
+ruff check .
+
+# Run type checking
+mypy experiments/ --ignore-missing-imports
+
+# Run all tests
+pytest --cov=experiments
+
+# Run syntax validation
+python -m py_compile experiments/pilot/run_pilot.py
+```
+
+#### Test Markers
+
+```python
+# pytest.ini markers
+@pytest.mark.slow       # Long-running tests
+@pytest.mark.gpu        # Requires GPU
+@pytest.mark.api        # Requires API keys
+@pytest.mark.integration # Integration tests
 ```
 
 ### 6.5 Test Fixtures
@@ -1078,7 +1147,7 @@ git push origin v2.1.0
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-DEV-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Internal |
 | Author | Research Team |
 | Approval Date | January 13, 2026 |
@@ -1089,5 +1158,6 @@ git push origin v2.1.0
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.4 | 2026-01-13 | Added CI/CD pipeline and dashboard sections | Research Team |
 | 2.0 | 2026-01-13 | Complete developer guide | Research Team |
 | 1.0 | 2025-11-06 | Initial developer guide | Research Team |

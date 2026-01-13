@@ -11,9 +11,96 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Planned
 - OpenAI GPT-4 model support
-- Async API calls for parallel execution
-- Web dashboard for results visualization
-- Automated CI/CD pipeline
+
+---
+
+## [2.4.0] - 2026-01-13
+
+### Changed
+- **Dashboard Theme Update**
+  - Converted from dark theme to light theme with white background
+  - Updated CSS variables for light-friendly colors
+  - Adjusted shadows, borders, and contrasts for white backgrounds
+  - Improved readability with darker text colors
+
+### Removed
+- **Mock Data Removal**
+  - Removed `dashboard/src/data/sampleResults.json` sample data file
+  - Dashboard now requires real pilot results data (no demo mode)
+  - Updated `useResults.js` to require actual data source
+
+### Added
+- **Data Loading Interface**
+  - File upload interface for loading pilot results JSON
+  - URL query parameter support (`?results=/path/to/file.json`)
+  - Empty state UI with upload instructions
+  - Better error handling for missing or invalid data
+
+---
+
+## [2.3.0] - 2026-01-13
+
+### Added
+- **Web Dashboard for Results Visualization**
+  - React 18 + Vite SPA with "Research Lab Terminal" aesthetic
+  - `dashboard/` directory with full frontend application
+  - 7 modular components:
+    - Header - Project title and metadata display
+    - MetricCard - Animated summary statistics with count-up effect
+    - ModelComparison - Horizontal bar chart with temperature toggle
+    - CategoryBreakdown - Donut chart with legend
+    - TokenUsage - Stacked area chart for input/output tokens
+    - ResponseTimes - Multi-line chart per model
+    - ErrorRates - Error distribution with severity coloring
+  - Asymmetrical grid layout with bold typography
+  - Light theme with cyan/coral accent colors
+  - Framer Motion animations and micro-interactions
+  - Data transformation utilities for pilot results JSON
+
+### Dependencies
+- Added `react`, `react-dom`, `recharts`, `framer-motion`, `lucide-react`
+- Vite for development and build tooling
+
+---
+
+## [2.2.0] - 2026-01-13
+
+### Added
+- **Automated CI/CD Pipeline**
+  - `.github/workflows/ci.yml` - Main CI workflow with lint, test, type-check jobs
+  - `.github/workflows/pr.yml` - Pull request checks workflow
+  - `pytest.ini` - Pytest configuration with markers for slow/GPU/API tests
+  - `pyproject.toml` - Tool configuration (ruff, black, mypy, coverage)
+  - `requirements-dev.txt` - Development dependencies
+  - Multi-version Python testing (3.8, 3.10, 3.11)
+  - Coverage reporting with Codecov integration
+  - Syntax validation for all Python files
+  - Import checking for async modules
+
+### Dependencies
+- Added `pytest>=7.0.0`, `pytest-cov>=4.0.0`, `pytest-asyncio>=0.21.0`
+- Added `ruff>=0.1.0`, `black>=23.0.0`, `mypy>=1.0.0`
+- Added `types-aiofiles>=23.0.0`, `types-tqdm>=4.0.0`
+
+---
+
+## [2.1.0] - 2026-01-13
+
+### Added
+- **Async API Calls for Parallel Execution**
+  - `async_rate_limiter.py` - Async token bucket rate limiter using asyncio.Lock
+  - `async_runners.py` - Async model runners (AsyncClaudeRunner, AsyncGeminiRunner, AsyncLocalModelRunner)
+  - `async_pilot_runner.py` - Async execution orchestrator with semaphore-based concurrency
+  - Configurable max_concurrency (default: 5 parallel requests)
+  - Performance improvement: ~4x faster execution (2-4 hours vs 10-14 hours)
+
+### Changed
+- `run_pilot.py` converted to async-only execution using asyncio.run()
+- Added `--max-concurrency` CLI flag for runtime configuration
+- Config files updated with `async_settings` block
+
+### Dependencies
+- Added `aiofiles>=23.0.0` for async file I/O
 
 ---
 
@@ -161,12 +248,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version Comparison
 
-| Version | Prompts | Models | Mitigations | Documentation |
-|---------|---------|--------|-------------|---------------|
-| 2.0.0 | 393 | 5 | 3 | 52+ files |
-| 1.1.0 | 393 | 5 | 3 | 25+ files |
-| 1.0.0 | 393 | 5 | 0 | 15+ files |
-| 0.1.0 | 0 | 0 | 0 | 1 file |
+| Version | Prompts | Models | Mitigations | Documentation | Features |
+|---------|---------|--------|-------------|---------------|----------|
+| 2.4.0 | 393 | 5 | 3 | 52+ files | Dashboard (production-ready) |
+| 2.3.0 | 393 | 5 | 3 | 52+ files | Dashboard, CI/CD |
+| 2.2.0 | 393 | 5 | 3 | 52+ files | CI/CD Pipeline |
+| 2.1.0 | 393 | 5 | 3 | 52+ files | Async execution |
+| 2.0.0 | 393 | 5 | 3 | 52+ files | Enterprise docs |
+| 1.1.0 | 393 | 5 | 3 | 25+ files | - |
+| 1.0.0 | 393 | 5 | 0 | 15+ files | - |
+| 0.1.0 | 0 | 0 | 0 | 1 file | - |
 
 ---
 
@@ -188,7 +279,7 @@ New documentation is additive and doesn't affect existing workflows.
 Complete rewrite. Start fresh with new installation:
 
 ```bash
-git clone https://github.com/yourusername/AAAI-2026.git
+git clone https://github.com/Kantosaurus/AAAI-2026.git
 cd AAAI-2026
 pip install -r experiments/pilot/requirements.txt
 ```
@@ -229,8 +320,8 @@ pip install -r experiments/pilot/requirements.txt
 ## Links
 
 - [Documentation Index](index.md)
-- [GitHub Repository](https://github.com/yourusername/AAAI-2026)
-- [Issue Tracker](https://github.com/yourusername/AAAI-2026/issues)
+- [GitHub Repository](https://github.com/Kantosaurus/AAAI-2026)
+- [Issue Tracker](https://github.com/Kantosaurus/AAAI-2026/issues)
 
 ---
 
@@ -239,7 +330,7 @@ pip install -r experiments/pilot/requirements.txt
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-CHANGELOG-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Public |
 | Author | Research Team |
 | Approval Date | January 13, 2026 |

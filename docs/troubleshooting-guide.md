@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-**Version:** 2.0
+**Version:** 2.4
 **Last Updated:** January 13, 2026
 **Document ID:** DOC-TROUBLE-001
 
@@ -17,7 +17,8 @@
 7. [Data and Results Issues](#7-data-and-results-issues)
 8. [Performance Issues](#8-performance-issues)
 9. [Annotation Issues](#9-annotation-issues)
-10. [Emergency Procedures](#10-emergency-procedures)
+10. [Dashboard Issues](#10-dashboard-issues)
+11. [Emergency Procedures](#11-emergency-procedures)
 
 ---
 
@@ -749,9 +750,114 @@ print(f'Common: {len(set(a1.prompt_id) & set(a2.prompt_id))}')
 
 ---
 
-## 10. Emergency Procedures
+## 10. Dashboard Issues
 
-### 10.1 System Crash During Long Run
+### 10.1 npm install Failures
+
+**Error:**
+```
+npm ERR! code ENOENT
+npm ERR! syscall open
+```
+
+**Solution:**
+```bash
+# Verify in correct directory
+cd dashboard
+
+# Clear cache and reinstall
+rm -rf node_modules package-lock.json
+npm cache clean --force
+npm install
+```
+
+### 10.2 Development Server Not Starting
+
+**Error:**
+```
+Error: Cannot find module 'vite'
+```
+
+**Solution:**
+```bash
+cd dashboard
+npm install vite --save-dev
+npm run dev
+```
+
+### 10.3 Data Not Loading
+
+**Symptom:** Dashboard shows empty state even with results file
+
+**Solutions:**
+```bash
+# Check results file format
+python -c "
+import json
+data = json.load(open('results/pilot/pilot_results.json'))
+print('Keys:', data.keys())
+print('Has metadata:', 'metadata' in data)
+print('Has runs:', 'runs' in data)
+"
+
+# Expected structure:
+# - metadata: {}
+# - runs: []
+```
+
+### 10.4 Charts Not Rendering
+
+**Symptom:** Empty chart containers
+
+**Solutions:**
+```bash
+# Check browser console for errors
+# Press F12 in browser
+
+# Verify data transformation
+# Check that dataTransforms.js handles your data format
+
+# Try with URL parameter
+http://localhost:5173?results=/absolute/path/to/results.json
+```
+
+### 10.5 Upload Not Working
+
+**Symptom:** File upload does nothing
+
+**Solutions:**
+```javascript
+// Check file type - must be .json
+// Check browser console for errors
+
+// Verify file size - very large files may hang
+// Split large result files if needed
+```
+
+### 10.6 Build Failures
+
+**Error:**
+```
+Build failed with errors
+```
+
+**Solution:**
+```bash
+cd dashboard
+
+# Check for TypeScript/JSX errors
+npm run build 2>&1 | head -50
+
+# Clear build cache
+rm -rf dist .cache
+npm run build
+```
+
+---
+
+## 11. Emergency Procedures
+
+### 11.1 System Crash During Long Run
 
 **Scenario:** System crashes during 10-hour pilot run
 
@@ -773,7 +879,7 @@ ls results/pilot/pilot_*.json
 echo '{"completed": {"model_1_temp0.0": true}, "last_model_index": 1}' > results/pilot/checkpoint.json
 ```
 
-### 10.2 API Key Compromised
+### 11.2 API Key Compromised
 
 **Scenario:** API key exposed in logs or code
 
@@ -793,7 +899,7 @@ git log --all -S "sk-ant" --oneline
 # 5. If committed, force push cleaned history or rotate all keys
 ```
 
-### 10.3 Results Data Loss
+### 11.3 Results Data Loss
 
 **Scenario:** Results directory accidentally deleted
 
@@ -809,7 +915,7 @@ tar -xzvf backups/latest.tar.gz
 python run_pilot.py --config config.json
 ```
 
-### 10.4 Unsafe Content Generated
+### 11.4 Unsafe Content Generated
 
 **Scenario:** Model generates concerning content
 
@@ -865,7 +971,7 @@ For unresolved issues:
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-TROUBLE-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Internal |
 | Author | Research Team |
 | Approval Date | January 13, 2026 |
@@ -876,5 +982,6 @@ For unresolved issues:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.4 | 2026-01-13 | Added dashboard troubleshooting section | Research Team |
 | 2.0 | 2026-01-13 | Comprehensive troubleshooting guide | Research Team |
 | 1.0 | 2025-11-06 | Initial troubleshooting | Research Team |

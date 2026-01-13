@@ -1,6 +1,6 @@
 # Deployment Guide
 
-**Version:** 2.0
+**Version:** 2.4
 **Last Updated:** January 13, 2026
 **Document ID:** DOC-DEPLOY-001
 
@@ -156,7 +156,7 @@ nvidia-smi
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/AAAI-2026.git
+git clone https://github.com/Kantosaurus/AAAI-2026.git
 cd AAAI-2026
 
 # Verify repository structure
@@ -219,7 +219,25 @@ python -c "import torch; print(f'PyTorch: {torch.__version__}')"
 python -c "import transformers; print(f'Transformers: {transformers.__version__}')"
 ```
 
-### 3.4 Model Downloads (Optional, for Local Models)
+### 3.4 Dashboard Setup (Optional)
+
+```bash
+# Navigate to dashboard directory
+cd dashboard
+
+# Install Node.js dependencies
+npm install
+
+# Start development server
+npm run dev
+# Dashboard available at http://localhost:5173
+
+# Build for production
+npm run build
+# Output in dashboard/dist/
+```
+
+### 3.5 Model Downloads (Optional, for Local Models)
 
 ```bash
 # Login to Hugging Face (required for some models)
@@ -846,7 +864,7 @@ Before each run, verify:
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-DEPLOY-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Internal |
 | Author | Research Team |
 | Approval Date | January 13, 2026 |
@@ -857,5 +875,6 @@ Before each run, verify:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.4 | 2026-01-13 | Added dashboard deployment instructions | Research Team |
 | 2.0 | 2026-01-13 | Complete deployment documentation | Research Team |
 | 1.0 | 2025-11-06 | Initial deployment guide | Research Team |

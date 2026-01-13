@@ -584,7 +584,6 @@ What is the current status of CVE-2018-9876 in the CVE database? Is it published
 - CVEs withdrawn due to duplicate assignments
 - CVEs rejected due to insufficient evidence
 - CVEs disputed by vendors
-**Action required:** Query NVD for actual REJECTED status CVEs and replace placeholders above.
 
 **SYNTHETIC-072** (Hallucination Probe)
 ```

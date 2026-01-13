@@ -1,6 +1,6 @@
 # LLM Hallucination Research Framework - Documentation Hub
 
-**Version:** 2.0
+**Version:** 2.4
 **Last Updated:** January 13, 2026
 **Status:** Implementation Complete - Ready for Production
 
@@ -29,6 +29,8 @@ This repository contains a comprehensive research framework for **characterizing
 - **Interpretability Analysis** - Mechanistic understanding via causal tracing and probing
 - **Mitigation Strategies** - RAG, symbolic checking, and uncertainty-based abstention
 - **Integration Testing** - Real-world vulnerability triage workflow simulations
+- **Results Dashboard** - Interactive web visualization for pilot results analysis
+- **CI/CD Pipeline** - Automated testing, linting, and quality checks
 
 ### Key Metrics
 
@@ -99,7 +101,7 @@ This repository contains a comprehensive research framework for **characterizing
 python --version
 
 # Clone repository
-git clone https://github.com/yourusername/AAAI-2026.git
+git clone https://github.com/Kantosaurus/AAAI-2026.git
 cd AAAI-2026
 
 # Install dependencies
@@ -143,9 +145,15 @@ docs/
 ├── developer-guide.md           # Developer onboarding
 ├── troubleshooting-guide.md     # Problem resolution guide
 ├── changelog.md                 # Version history
-├── implementation.md            # Research methodology
 ├── safety_policy_checklist.md   # Safety compliance
 └── public_sources_seed_list.md  # Data source reference
+
+dashboard/
+├── src/
+│   ├── components/              # React chart components
+│   ├── hooks/                   # Data loading hooks
+│   └── utils/                   # Data transformation utilities
+└── README.md                    # Dashboard documentation
 ```
 
 ### Component Documentation
@@ -251,7 +259,7 @@ If you discover safety issues:
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-INDEX-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Public |
 | Author | Research Team |
 | Reviewer | Project Lead |
@@ -263,6 +271,7 @@ If you discover safety issues:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.4 | 2026-01-13 | Added dashboard and CI/CD documentation | Research Team |
 | 2.0 | 2026-01-13 | Enterprise documentation overhaul | Research Team |
 | 1.0 | 2025-11-06 | Initial documentation | Research Team |
 

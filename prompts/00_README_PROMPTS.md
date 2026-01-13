@@ -361,8 +361,7 @@ If you use this dataset in your research, please cite:
 
 ## Contact and Contributions
 
-**Project Lead:** [Contact Info]
-**Issues/Questions:** [Contact Method]
+**Issues/Questions:** Open an issue on GitHub
 
 **Contributions Welcome:**
 - Additional prompt templates

@@ -588,6 +588,6 @@ If you use this dataset or scripts in your research:
 - API errors: Verify NVD API is operational at https://nvd.nist.gov/
 - Data questions: Consult NVD documentation
 
-**Project Lead:** [Contact Info]
-**Last Updated:** November 5, 2025
-**Version:** 1.0
+**Questions:** Open an issue on GitHub
+**Last Updated:** January 13, 2026
+**Version:** 2.4

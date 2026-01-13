@@ -1,6 +1,6 @@
 # User Guide
 
-**Version:** 2.0
+**Version:** 2.4
 **Last Updated:** January 13, 2026
 **Document ID:** DOC-USER-001
 
@@ -60,7 +60,7 @@ The LLM Hallucination Research Framework is a comprehensive toolkit for studying
 
 ```bash
 # Step 1: Clone and enter repository
-git clone https://github.com/yourusername/AAAI-2026.git
+git clone https://github.com/Kantosaurus/AAAI-2026.git
 cd AAAI-2026
 
 # Step 2: Create virtual environment
@@ -408,7 +408,43 @@ python evaluate_mitigations.py \
 
 ## 7. Analysis and Reporting
 
-### 7.1 Using the Analysis Notebook
+### 7.1 Using the Web Dashboard
+
+The framework includes an interactive web dashboard for visualizing pilot results.
+
+#### Starting the Dashboard
+
+```bash
+cd dashboard
+npm install   # First time only
+npm run dev
+```
+
+#### Loading Results
+
+1. **Via File Upload**: Click "Upload Results File" and select your `pilot_results.json`
+2. **Via URL Parameter**: Navigate to `http://localhost:5173?results=/path/to/results.json`
+
+#### Dashboard Components
+
+| Component | Description |
+|-----------|-------------|
+| MetricCard | Summary statistics (total prompts, success rate, tokens) |
+| ModelComparison | Bar chart comparing models with temperature toggle |
+| CategoryBreakdown | Donut chart of prompt categories |
+| TokenUsage | Stacked area chart of input/output tokens |
+| ResponseTimes | Line chart of response times per model |
+| ErrorRates | Error distribution visualization |
+
+#### Building for Production
+
+```bash
+cd dashboard
+npm run build
+# Output in dashboard/dist/
+```
+
+### 7.2 Using the Analysis Notebook
 
 ```bash
 cd notebooks
@@ -663,7 +699,7 @@ A: See README.md for BibTeX citation.
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-USER-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Public |
 | Author | Research Team |
 | Approval Date | January 13, 2026 |
@@ -674,5 +710,6 @@ A: See README.md for BibTeX citation.
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.4 | 2026-01-13 | Added web dashboard documentation | Research Team |
 | 2.0 | 2026-01-13 | Complete user guide | Research Team |
 | 1.0 | 2025-11-06 | Initial user guide | Research Team |

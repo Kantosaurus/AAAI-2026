@@ -36,9 +36,11 @@ except ImportError:
 def load_nvd_metadata(nvd_file: Path) -> List[Dict]:
     """Load NVD CVE metadata"""
     if not nvd_file.exists():
-        print(f"Warning: NVD file not found: {nvd_file}")
-        print("Creating sample data for demo...")
-        return create_sample_nvd_data()
+        raise FileNotFoundError(
+            f"NVD metadata file not found: {nvd_file}\n"
+            f"Please provide a valid NVD data file. You can fetch NVD data using:\n"
+            f"  python data/scripts/fetch_nvd_metadata.py --output {nvd_file}"
+        )
 
     with open(nvd_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -50,47 +52,6 @@ def load_nvd_metadata(nvd_file: Path) -> List[Dict]:
         return data['cve_items']
 
     return []
-
-
-def create_sample_nvd_data() -> List[Dict]:
-    """Create sample NVD data for demo"""
-    return [
-        {
-            "cve_id": "CVE-2021-44228",
-            "description": "Apache Log4j2 2.0-beta9 through 2.15.0 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.",
-            "severity": "CRITICAL",
-            "cvss_score": 10.0,
-            "published_date": "2021-12-10"
-        },
-        {
-            "cve_id": "CVE-2017-0144",
-            "description": "The SMBv1 server in Microsoft Windows Vista SP2; Windows Server 2008 SP2 and R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold and R2; Windows RT 8.1; and Windows 10 Gold, 1511, and 1607; and Windows Server 2016 allows remote attackers to execute arbitrary code via crafted packets, aka 'Windows SMB Remote Code Execution Vulnerability'.",
-            "severity": "CRITICAL",
-            "cvss_score": 8.1,
-            "published_date": "2017-03-14"
-        },
-        {
-            "cve_id": "CVE-2014-0160",
-            "description": "The (1) TLS and (2) DTLS implementations in OpenSSL 1.0.1 before 1.0.1g do not properly handle Heartbeat Extension packets, which allows remote attackers to obtain sensitive information from process memory via crafted packets that trigger a buffer over-read, as demonstrated by reading private keys, related to d1_both.c and t1_lib.c, aka the Heartbleed bug.",
-            "severity": "HIGH",
-            "cvss_score": 7.5,
-            "published_date": "2014-04-07"
-        },
-        {
-            "cve_id": "CVE-2020-1472",
-            "description": "An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol (MS-NRPC), aka 'Netlogon Elevation of Privilege Vulnerability'.",
-            "severity": "CRITICAL",
-            "cvss_score": 10.0,
-            "published_date": "2020-08-17"
-        },
-        {
-            "cve_id": "CVE-2023-34362",
-            "description": "In Progress MOVEit Transfer before 2021.0.6 (13.0.6), 2021.1.4 (13.1.4), 2022.0.4 (14.0.4), 2022.1.5 (14.1.5), and 2023.0.1 (15.0.1), a SQL injection vulnerability has been found in the MOVEit Transfer web application that could allow an unauthenticated attacker to gain access to MOVEit Transfer's database.",
-            "severity": "CRITICAL",
-            "cvss_score": 9.8,
-            "published_date": "2023-06-01"
-        }
-    ]
 
 
 def build_text_corpus(nvd_data: List[Dict]) -> List[str]:

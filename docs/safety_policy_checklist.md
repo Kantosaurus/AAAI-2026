@@ -1,8 +1,9 @@
 # Safety Policy Checklist for LLM Hallucination Research in Cybersecurity Contexts
 
 **Project:** Characterizing and Mitigating Hallucinations in Security-Related LLM Applications
-**Timeline:** Until November 30, 2025
-**Last Updated:** November 5, 2025
+**Timeline:** Ongoing research
+**Last Updated:** January 13, 2026
+**Version:** 2.4
 
 ---
 
@@ -179,10 +180,10 @@
 
 ## Emergency Contacts
 
-- **Institutional IRB/Ethics Committee:** [Contact Info]
-- **Cybersecurity Incident Response:** [Contact Info]
-- **Research Advisor/Principal Investigator:** [Contact Info]
-- **Legal/Compliance Office:** [Contact Info]
+- **Institutional IRB/Ethics Committee:** Contact your institution
+- **Cybersecurity Incident Response:** Contact your institution's security team
+- **Research Advisor/Principal Investigator:** Contact your supervisor
+- **Legal/Compliance Office:** Contact your institution's legal department
 - **CERT Coordination Center:** cert@cert.org
 
 ---

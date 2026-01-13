@@ -4,6 +4,12 @@
   "output_dir": "results/pilot",
   "seed": 42,
   "api_delay": 1.0,
+  "requests_per_minute": 50,
+  "max_retries": 3,
+  "async_settings": {
+    "max_concurrency": 5,
+    "batch_size": 10
+  },
   "models": [
     {
       "name": "claude-3-5-sonnet-20241022",

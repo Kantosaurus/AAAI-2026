@@ -12,6 +12,9 @@ numpy>=1.24.0
 pandas>=2.0.0
 tqdm>=4.65.0
 
+# Async support
+aiofiles>=23.0.0
+
 # Optional but recommended
 sentencepiece>=0.1.99  # For some tokenizers
 protobuf>=3.20.0       # For model loading

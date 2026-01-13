@@ -5,6 +5,12 @@
   "num_prompts": 50,
   "seed": 42,
   "api_delay": 1.0,
+  "requests_per_minute": 50,
+  "max_retries": 3,
+  "async_settings": {
+    "max_concurrency": 3,
+    "batch_size": 5
+  },
   "models": [
     {
       "name": "claude-3-5-sonnet-20241022",

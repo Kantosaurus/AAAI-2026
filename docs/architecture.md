@@ -1,6 +1,6 @@
 # System Architecture Documentation
 
-**Version:** 2.0
+**Version:** 2.4
 **Last Updated:** January 13, 2026
 **Document ID:** DOC-ARCH-001
 
@@ -62,7 +62,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                      Presentation Layer                          │
-│  CLI Tools | Jupyter Notebooks | Analysis Scripts                │
+│  CLI Tools | Web Dashboard | Jupyter Notebooks | Analysis Scripts│
 ├─────────────────────────────────────────────────────────────────┤
 │                      Application Layer                           │
 │  Pilot Runner | Annotation Pipeline | Mitigation Engine          │
@@ -75,6 +75,9 @@
 ├─────────────────────────────────────────────────────────────────┤
 │                      External Services                           │
 │  Claude API | Gemini API | Hugging Face | NVD/MITRE             │
+├─────────────────────────────────────────────────────────────────┤
+│                      DevOps & CI/CD                              │
+│  GitHub Actions | pytest | ruff | mypy | Codecov                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -107,6 +110,15 @@ AAAI-2026/
 │
 ├── notebooks/               # Presentation Layer
 │   └── analysis_template.py # Analysis notebooks
+│
+├── dashboard/               # Web Dashboard (React)
+│   ├── src/components/     # Chart components
+│   ├── src/hooks/          # Data loading
+│   └── src/utils/          # Data transforms
+│
+├── .github/workflows/       # CI/CD Pipeline
+│   ├── ci.yml              # Main CI workflow
+│   └── pr.yml              # PR checks
 │
 └── docs/                    # Documentation
     └── *.md                 # Technical documentation
@@ -663,7 +675,7 @@ transformer-lens>=1.0.0
 | Attribute | Value |
 |-----------|-------|
 | Document ID | DOC-ARCH-001 |
-| Version | 2.0 |
+| Version | 2.4 |
 | Classification | Internal |
 | Author | Research Team |
 | Approval Date | January 13, 2026 |
@@ -674,5 +686,6 @@ transformer-lens>=1.0.0
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.4 | 2026-01-13 | Added dashboard and CI/CD components | Research Team |
 | 2.0 | 2026-01-13 | Complete architecture documentation | Research Team |
 | 1.0 | 2025-11-06 | Initial architecture | Research Team |
